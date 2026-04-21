@@ -1,0 +1,23 @@
+version: 1.0.{build}
+image: Visual Studio 2022
+
+configuration: Production
+
+build:
+  project: RecognitionMedia.Repro.sln
+  publish_wap: true
+  parallel: true
+  verbosity: normal
+
+after_build:
+- cmd: >-
+    dotnet msbuild CustomerIOService\CustomerIOService.csproj /t:restore;rebuild;publish /p:Configuration=Release /p:RuntimeIdentifier=win-x64 /p:SelfContained=true /p:OutputPath=%APPVEYOR_BUILD_FOLDER%\CustomerIOService\bin\Release\files\
+
+    7z a CustomerIOService.zip %APPVEYOR_BUILD_FOLDER%\CustomerIOService\bin\Release\files\publish\*
+
+artifacts:
+- path: CustomerIOService.zip
+  name: CustomerIOService
+
+test: off
+
