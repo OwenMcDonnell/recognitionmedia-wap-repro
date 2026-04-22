@@ -27,7 +27,7 @@ artifacts:
 - path: CustomerIOService.zip
   name: CustomerIOService
 
-- path: %APPVEYOR_BUILD_FOLDER%\Web\obj\Debug\Package\Web.zip
+- path: C:\projects\recognitionmedia-wap-repro\Web\obj\Debug\Package\Web.zip
   name: Web.zip
 
 - path: C:\projects\recognitionmedia-wap-repro\API\obj\Debug\Package\API.zip
