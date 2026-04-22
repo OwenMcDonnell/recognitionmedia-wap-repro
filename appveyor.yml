@@ -15,7 +15,7 @@ install:
 #   verbosity: normal
 
 build_script:
-  - ps: msbuild "C:\projects\recognitionmedia-wap-repro\RecognitionMedia.Repro.sln" /m /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:DeployOnBuild=True /p:PublishProfile=appveyor
+  - ps: msbuild "C:\projects\recognitionmedia-wap-repro\RecognitionMedia.Repro.sln" /m /p:VisualStudioVersion=17.0 /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:DeployOnBuild=True /p:PublishProfile=appveyor
 
 after_build:
 - cmd: >-
