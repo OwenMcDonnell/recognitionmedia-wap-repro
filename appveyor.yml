@@ -27,11 +27,11 @@ artifacts:
 - path: CustomerIOService.zip
   name: CustomerIOService
 
-- path: Web\obj\Debug\Package\Web.zip
-  name: Web.zip
+# - path: Web\obj\Debug\Package\Web.zip
+#   name: Web.zip
 
-- path: API\obj\Debug\Package\API.zip
-  name: API.zip
+# - path: API\obj\Debug\Package\API.zip
+#   name: API.zip
 
 test: off
 
